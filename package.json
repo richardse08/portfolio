@@ -1,0 +1,22 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "// Input your guest username and hit enter to see links to my projects and social media accounts!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richardse08/portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/richardse08/portfolio/issues"
+  },
+  "homepage": "https://github.com/richardse08/portfolio#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}

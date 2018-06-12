@@ -1,0 +1,355 @@
+/**********************    Establishing environment    *********************/
+
+/* Full screen scretch responsive to window size */
+body, html {
+    height: 100%;
+}
+
+/* Give entire screen black background so it doesn't flicker when fading */
+html {
+    background-color: black;
+}
+
+/* Fading transition for body */
+body {
+    opacity: 1;
+    transition: 3000ms opacity;
+}
+
+body.fade-out {
+    opacity: 0;
+    transition: none;
+}
+
+/* Create background setting that changes sizes incrementally with viewport */
+.wrapper { 
+    background-image: url('images/background.jpg');
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* font sets **********************************/
+@font-face {
+    font-family: 'Adelle Light';
+    src: url(/fonts/Adelle_light.otf);
+}
+
+@font-face {
+    font-family: 'Proxima Nova Light';
+    src: url(/fonts/ProximaNova-Light.otf);
+}
+
+
+
+
+
+
+/***********************    Creating some reusable tools    ************************/
+.display-none {
+    display: none;
+}
+
+.clear {
+    clear: both;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+
+
+
+
+
+/***************************    Intro page styling   *********************************/
+
+/* Entire opening stretched to viewheight and with 'opacity' added */
+/* Used rgba instead of opacity to ensure we cover all elements on page, not just parent div */
+.lock-screen {
+    height: 100vh;
+    background: rgba(45, 45, 45, 0.7);
+}
+
+/* Top header bar of opening page */
+/* Made this fixated to the ceiling of the page */
+.lock-screen-header {
+    position: fixed;
+    top: 0px;
+    float: right;
+    width: 100%;
+    height: 20px;
+    margin-top: 8px;
+    padding-right: 15px;
+    color: rgba(202, 202, 229, 0.7);
+}
+
+/* Buttons and login content on center page */
+/* Had to get creative here to center this stuff, it horizontal axis was fixed before */
+.lock-screen-content {
+    margin-left: 50%;
+    margin-top: 50vh;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    
+}
+
+/* ROW 1 of intro */
+.icon-shell {
+    text-align: center;
+}
+.icon {
+    border-radius: 50%;
+    background-image: url('images/osx-icon.png');
+    width: 50px;
+    height: 50px;
+}
+
+/* ROW 2 of intro */
+.guest-name {
+    width: 100px;
+    text-align: center;
+    margin-top: 25px;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ROW 3 of intro */
+.input-shell {
+    text-align: center;
+    margin-top: 30px;
+    margin-left: -35px;
+}
+
+#enter-icon {
+    border-radius: 50%;
+    opacity: .7; 
+    filter: alpha(opacity=50);
+    height: 20px;
+    width: 20px;
+    margin-right: 15px;
+}
+
+#username-enter {
+    width: 250px;
+}
+
+input {
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: rgba(240, 240, 240, 0.5);
+    width: 250px;
+    height: 40px;
+    padding: 10px;
+    color: white;
+}
+
+
+
+
+
+
+/***************    Header and footer on intro page      ****************************/
+/* Setting view height to 100 to eliminate scroll */
+.main-screen {
+    height: 100vh;
+}
+
+.header {
+    position: fixed;
+    top: 0px;
+    width: 100vw;
+    height: 20px;
+    background: rgb(170, 170, 185);
+}
+
+/* Adding some spacing to mimic Mac OS */
+.icon-margin {
+    margin-right: 10px;
+}
+
+#time, #currentDate, #user-name {
+    margin-right: 10px;
+}
+
+#user-name {
+    margin-right: 30px;
+}
+
+.apple-icon {
+    width: 15px;
+    height: 15px;
+    margin-left: 25px;
+    margin-top: 3px;
+}
+
+/* Used transform and left: 50% to center because margin-l/r: auto */
+/* will not work when using a fixed position and 0 bottom*/
+.footer {
+    border-radius: 7px 7px 0% 0%;    
+    background: rgba(240, 240, 240, 0.3);
+    width: 1060px;
+    height: 70px;
+    position: fixed;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+/* Desktop and Footer icons for MAIN PAGE */
+.desktop-icon {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    float: left;
+    border-radius: 50%;
+    transition: 1000ms;
+}
+
+.footer-icon {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    float: left;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+/**************************    Project Windows    **************************/
+
+/* Colors to replicate Chrome windows */
+.window-header {
+    min-width: 375px;
+    height: 50px;
+    border-color: rgb(176, 190, 197);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 7px 7px 0% 0%;
+    padding-right: 30px;
+    background-color: dimgray;
+    background: rgba(45, 45, 45, 0.5);
+}
+
+.window-url {
+    margin-left: 60px;
+    margin-top: 8px;
+    padding-left: 5px;
+    padding-top: 5px;
+    height: 30px;
+    border-color: black;
+    border-color: rgb(176, 190, 197);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 7px 7px 7px 7px;
+    color: rgb(144, 164, 174);
+}
+
+.red-dot, .yellow-dot, .green-dot {
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    margin-top: 15px;
+    margin-left: 4px;
+    float: left;
+    border-color: rgb(144, 164, 174);
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.red-dot {
+    background-color: #ff575d;
+}
+
+.yellow-dot {
+    background-color: #ffba44;
+}
+
+.green-dot {
+    background-color: #1bc94e;
+}
+
+.project-image {
+    margin: auto;
+}
+
+
+
+
+
+
+/********************************Drag windows and Interact.js ************************************/
+
+/* Drag target divs (gray area around project images and descriptions) */
+#drag-0, #drag-1, #drag-2, #drag-3, #drag-4, #drag-5, #drag-6, #drag-7, #drag-8, #drag-9, #drag-10, #drag-11, #drag-12, #drag-13, #drag-14, #drag-15 {
+    height: 500px;
+    width: 525px;
+    min-height: 450px;
+    min-width: 450px;
+    margin: 30px;
+    background-color: dimgray;
+    color: white;
+    border-radius: 0.75em;
+    padding: 0%;
+    transform: translate(0px, 10px);
+}
+
+/* Temporary about me page that displays unless user clicks a project */
+.about-me {
+    height: 530px;
+    width: 450px;
+    padding: 0px 15px 5px 15px;
+    margin-left: 50%;
+    margin-top: 45vh;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    background: rgba(45, 45, 45, 0.7);
+    color: white;
+    text-align: center;
+    font-family: 'Proxima Nova Light', 'Helvetica';
+}
+
+.about-me a {
+    color: aqua;
+    font-size: 20px !important;
+}
+
+.window-font {
+    font-family: 'Proxima Nova Light', 'Helvetica';
+}
+
+
+
+
+
+
+
+
+
+
+.desktop-icon:hover {
+    transform: rotate(30deg);
+    transition: 300ms;
+}
+
+
+
+
+
+
+
+
