@@ -4,7 +4,6 @@ $(document).ready(function(){
     var windowCounter = [];
     
     
-    
     // Fade-out body on load
     $(function() {
         $('body').removeClass('fade-out');
@@ -127,7 +126,6 @@ $(document).ready(function(){
             status: 'on'
         }
     }
-    console.log(portfolioObject.weatherApp);
     
     
     
@@ -290,8 +288,17 @@ $(document).ready(function(){
     };
     
     
-    
-    
+    ///////////////////// Control when to show enter icon /////////////////
+    document.getElementById("username-enter").addEventListener("input", usernameFieldListener);
+
+    function usernameFieldListener() {
+        var characterCount = $("#username-enter").val().split('').length;
+        console.log(characterCount);
+        if (characterCount != 0) {
+            $('#enter-icon').removeClass('visibility-none');
+        }
+        else {$('#enter-icon').addClass('visibility-none');}
+    }
  
     ///////////////////////// Gathering credentials //////////////////////
     function credentials() {        
@@ -299,7 +306,6 @@ $(document).ready(function(){
         $("#user-name").html(inputValue);
     };
     
-
     
     ///////////////////////// Time fxn defined ///////////////////////////
     function startTime() {
@@ -367,7 +373,7 @@ $(document).ready(function(){
         }
     });
 
-    
+
 
     
     
