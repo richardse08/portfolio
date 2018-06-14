@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
-//    var windowCounter = 1;
-    var windowCounter = [];
+   var windowCounter = 1;
+    // var windowCounter = [];
     
     
     // Fade-out body on load
@@ -12,120 +12,120 @@ $(document).ready(function(){
     // create object to hold portfolio elements
     // elements include small image, big image, discription, href target and URL string
 
-    var portfolioObject = {
-        gifViewer: {
-            imageSource: 'images/gif-viewer.png',
-            iconSource: 'images/gif-viewer.png',
-            urlSource: 'http://gif-viewer.herokuapp.com/',
-            descriptionSource: 'Gif Viewer API built on Node!',
-            status: 'on'
-        },
-        vueRecipe: {
-            imageSource: 'images/gif-viewer.png',
-            iconSource: 'images/gif-viewer.png',
-            urlSource: 'http://gif-viewer.herokuapp.com/',
-            descriptionSource: 'Gif Viewer API built on Node!',
-            status: 'on'
-        },
-        reactLeaderboard: {
-            imageSource: 'images/gif-viewer.png',
-            iconSource: 'images/gif-viewer.png',
-            urlSource: 'http://gif-viewer.herokuapp.com/',
-            descriptionSource: 'Gif Viewer API built on Node!',
-            status: 'on'
-        },
-        mattrProject: {
-            imageSource: 'images/gif-viewer.png',
-            iconSource: 'images/gif-viewer.png',
-            urlSource: 'http://gif-viewer.herokuapp.com/',
-            descriptionSource: 'Gif Viewer API built on Node!',
-            status: 'on'
-        },
-        fiosProject: {
-            imageSource: 'images/gif-viewer.png',
-            iconSource: 'images/gif-viewer.png',
-            urlSource: 'http://gif-viewer.herokuapp.com/',
-            descriptionSource: 'Gif Viewer API built on Node!',
-            status: 'on'
-        },
-        votingAppV2: {
-            imageSource: 'images/gif-viewer.png',
-            iconSource: 'images/gif-viewer.png',
-            urlSource: 'http://gif-viewer.herokuapp.com/',
-            descriptionSource: 'Gif Viewer API built on Node!',
-            status: 'on'
-        },
-        redventuresDevtest: {
-            imageSource: 'images/gif-viewer.png',
-            iconSource: 'images/gif-viewer.png',
-            urlSource: 'http://gif-viewer.herokuapp.com/',
-            descriptionSource: 'Gif Viewer API built on Node!',
-            status: 'on'
-        },
-        simonSays: {
-            imageSource: 'images/gif-viewer.png',
-            iconSource: 'images/gif-viewer.png',
-            urlSource: 'http://gif-viewer.herokuapp.com/',
-            descriptionSource: 'Gif Viewer API built on Node!',
-            status: 'on'
-        },
-        ticTacToe: {
-            imageSource: 'images/gif-viewer.png',
-            iconSource: 'images/gif-viewer.png',
-            urlSource: 'http://gif-viewer.herokuapp.com/',
-            descriptionSource: 'Gif Viewer API built on Node!',
-            status: 'on'
-        },
-        pomodoroClock: {
-            imageSource: 'images/gif-viewer.png',
-            iconSource: 'images/gif-viewer.png',
-            urlSource: 'http://gif-viewer.herokuapp.com/',
-            descriptionSource: 'Gif Viewer API built on Node!',
-            status: 'on'
-        },
-        calculator: {
-            imageSource: 'images/gif-viewer.png',
-            iconSource: 'images/gif-viewer.png',
-            urlSource: 'http://gif-viewer.herokuapp.com/',
-            descriptionSource: 'Gif Viewer API built on Node!',
-            status: 'on'
-        },
-        twitch: {
-            imageSource: 'images/gif-viewer.png',
-            iconSource: 'images/gif-viewer.png',
-            urlSource: 'http://gif-viewer.herokuapp.com/',
-            descriptionSource: 'Gif Viewer API built on Node!',
-            status: 'on'
-        },
-        wikipediaViewer: {
-            imageSource: 'images/gif-viewer.png',
-            iconSource: 'images/gif-viewer.png',
-            urlSource: 'http://gif-viewer.herokuapp.com/',
-            descriptionSource: 'Gif Viewer API built on Node!',
-            status: 'on'
-        },
-        weatherApp: {
-            imageSource: 'images/gif-viewer.png',
-            iconSource: 'images/gif-viewer.png',
-            urlSource: 'http://gif-viewer.herokuapp.com/',
-            descriptionSource: 'Gif Viewer API built on Node!',
-            status: 'on'
-        },
-        randomQuote: {
-            imageSource: 'images/gif-viewer.png',
-            iconSource: 'images/gif-viewer.png',
-            urlSource: 'http://gif-viewer.herokuapp.com/',
-            descriptionSource: 'Gif Viewer API built on Node!',
-            status: 'on'
-        },
-        tribute: {
-            imageSource: 'images/gif-viewer.png',
-            iconSource: 'images/gif-viewer.png',
-            urlSource: 'http://gif-viewer.herokuapp.com/',
-            descriptionSource: 'Gif Viewer API built on Node!',
-            status: 'on'
-        }
-    }
+    // var portfolioObject = {
+    //     gifViewer: {
+    //         imageSource: 'images/gif-viewer.png',
+    //         iconSource: 'images/gif-viewer.png',
+    //         urlSource: 'http://gif-viewer.herokuapp.com/',
+    //         descriptionSource: 'Gif Viewer API built on Node!',
+    //         status: 'on'
+    //     },
+    //     vueRecipe: {
+    //         imageSource: 'images/gif-viewer.png',
+    //         iconSource: 'images/gif-viewer.png',
+    //         urlSource: 'http://gif-viewer.herokuapp.com/',
+    //         descriptionSource: 'Gif Viewer API built on Node!',
+    //         status: 'on'
+    //     },
+    //     reactLeaderboard: {
+    //         imageSource: 'images/gif-viewer.png',
+    //         iconSource: 'images/gif-viewer.png',
+    //         urlSource: 'http://gif-viewer.herokuapp.com/',
+    //         descriptionSource: 'Gif Viewer API built on Node!',
+    //         status: 'on'
+    //     },
+    //     mattrProject: {
+    //         imageSource: 'images/gif-viewer.png',
+    //         iconSource: 'images/gif-viewer.png',
+    //         urlSource: 'http://gif-viewer.herokuapp.com/',
+    //         descriptionSource: 'Gif Viewer API built on Node!',
+    //         status: 'on'
+    //     },
+    //     fiosProject: {
+    //         imageSource: 'images/gif-viewer.png',
+    //         iconSource: 'images/gif-viewer.png',
+    //         urlSource: 'http://gif-viewer.herokuapp.com/',
+    //         descriptionSource: 'Gif Viewer API built on Node!',
+    //         status: 'on'
+    //     },
+    //     votingAppV2: {
+    //         imageSource: 'images/gif-viewer.png',
+    //         iconSource: 'images/gif-viewer.png',
+    //         urlSource: 'http://gif-viewer.herokuapp.com/',
+    //         descriptionSource: 'Gif Viewer API built on Node!',
+    //         status: 'on'
+    //     },
+    //     redventuresDevtest: {
+    //         imageSource: 'images/gif-viewer.png',
+    //         iconSource: 'images/gif-viewer.png',
+    //         urlSource: 'http://gif-viewer.herokuapp.com/',
+    //         descriptionSource: 'Gif Viewer API built on Node!',
+    //         status: 'on'
+    //     },
+    //     simonSays: {
+    //         imageSource: 'images/gif-viewer.png',
+    //         iconSource: 'images/gif-viewer.png',
+    //         urlSource: 'http://gif-viewer.herokuapp.com/',
+    //         descriptionSource: 'Gif Viewer API built on Node!',
+    //         status: 'on'
+    //     },
+    //     ticTacToe: {
+    //         imageSource: 'images/gif-viewer.png',
+    //         iconSource: 'images/gif-viewer.png',
+    //         urlSource: 'http://gif-viewer.herokuapp.com/',
+    //         descriptionSource: 'Gif Viewer API built on Node!',
+    //         status: 'on'
+    //     },
+    //     pomodoroClock: {
+    //         imageSource: 'images/gif-viewer.png',
+    //         iconSource: 'images/gif-viewer.png',
+    //         urlSource: 'http://gif-viewer.herokuapp.com/',
+    //         descriptionSource: 'Gif Viewer API built on Node!',
+    //         status: 'on'
+    //     },
+    //     calculator: {
+    //         imageSource: 'images/gif-viewer.png',
+    //         iconSource: 'images/gif-viewer.png',
+    //         urlSource: 'http://gif-viewer.herokuapp.com/',
+    //         descriptionSource: 'Gif Viewer API built on Node!',
+    //         status: 'on'
+    //     },
+    //     twitch: {
+    //         imageSource: 'images/gif-viewer.png',
+    //         iconSource: 'images/gif-viewer.png',
+    //         urlSource: 'http://gif-viewer.herokuapp.com/',
+    //         descriptionSource: 'Gif Viewer API built on Node!',
+    //         status: 'on'
+    //     },
+    //     wikipediaViewer: {
+    //         imageSource: 'images/gif-viewer.png',
+    //         iconSource: 'images/gif-viewer.png',
+    //         urlSource: 'http://gif-viewer.herokuapp.com/',
+    //         descriptionSource: 'Gif Viewer API built on Node!',
+    //         status: 'on'
+    //     },
+    //     weatherApp: {
+    //         imageSource: 'images/gif-viewer.png',
+    //         iconSource: 'images/gif-viewer.png',
+    //         urlSource: 'http://gif-viewer.herokuapp.com/',
+    //         descriptionSource: 'Gif Viewer API built on Node!',
+    //         status: 'on'
+    //     },
+    //     randomQuote: {
+    //         imageSource: 'images/gif-viewer.png',
+    //         iconSource: 'images/gif-viewer.png',
+    //         urlSource: 'http://gif-viewer.herokuapp.com/',
+    //         descriptionSource: 'Gif Viewer API built on Node!',
+    //         status: 'on'
+    //     },
+    //     tribute: {
+    //         imageSource: 'images/gif-viewer.png',
+    //         iconSource: 'images/gif-viewer.png',
+    //         urlSource: 'http://gif-viewer.herokuapp.com/',
+    //         descriptionSource: 'Gif Viewer API built on Node!',
+    //         status: 'on'
+    //     }
+    // }
     
     
     
@@ -168,17 +168,24 @@ $(document).ready(function(){
     // When any divs with icons class is clicked
     // Grab its id and pass it into windowLoader to render html window
     $(".footer-icon").click(function(){
-        if (windowCounter.length <= 3) {
-            for (i = 0; i < windowCounter.length; i++) {
-                if (windowCounter[i] == this.id) {
-                    console.log('asdfd');
-                    return;
-                }
-                else {
-                    windowLoader.push(this.id);
-                }
-            }
+
+        if (windowCounter <= 3) {
+            windowLoader(this.id);  
+            $('.about-me').addClass('display-none');
+            windowCounter++;
         }
+
+        // if (windowCounter.length <= 3) {
+        //     for (i = 0; i < windowCounter.length; i++) {
+        //         if (windowCounter[i] == this.id) {
+        //             return;
+        //         }
+        //         else {
+        //             windowLoader.push(this.id);
+        //             console.log(this.id);
+        //         }
+        //     }
+        // }
     });
     
 
